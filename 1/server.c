@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 
     listen(listenfd, 10); 
 
-    char *mesg = "Welcome to Venom's scoket!";
+    char *mesg = "Welcome to Venom's socket!";
 
     while(1)
     {
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 
 	sent = send(connfd, mesg, strlen(mesg), 0);	 
 
-	printf("Sent %d bytes to the client %s\n", sent, inet_ntoa(client_addr.sin_addr));
+	printf("Sent %d bytes to the client %s:%d\n", sent, inet_ntoa(client_addr.sin_addr), ntohs(client_addr.sin_port));
 
         close(connfd);
         sleep(1);
