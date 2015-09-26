@@ -1,7 +1,7 @@
 from scapy.all import *
 import random
 # Define end host and TCP port range
-host = "nataraj-2276"
+host = ""
 portRange = [22,23,80,443,3389]
 # Send SYN with random Src Port for each Dst port
 for dstPort in portRange:
